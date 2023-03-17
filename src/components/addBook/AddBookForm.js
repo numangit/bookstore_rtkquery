@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAddBookMutation } from '../../features/api/apiSlice';
 
 const AddBookForm = () => {
-
+    const navigate = useNavigate();
     const [addBook, { isLoading, isError }] = useAddBookMutation();
 
+    //controlled input states
     const [name, setName] = useState('');
     const [author, setAuthor] = useState('');
     const [thumbnail, setThumbnail] = useState('');
@@ -18,7 +20,9 @@ const AddBookForm = () => {
     //function handle submit
     const handleSubmit = (e) => {
         e.preventDefault();
+        console.log(newBook);
         addBook(newBook);
+        navigate('/');
     };
 
     return (
