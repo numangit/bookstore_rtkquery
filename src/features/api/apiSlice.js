@@ -7,8 +7,11 @@ export const apiSlice = createApi({
     endpoints: (builder) => ({
         getBooks: builder.query({
             query: () => ({ url: "/books" }),
+        }),
+        getBook: builder.query({
+            query: (id) => ({ url: `/books/${id}` })
         })
     }),
 });
 
-export const { useGetBooksQuery } = apiSlice;
+export const { useGetBooksQuery, useGetBookQuery } = apiSlice;
