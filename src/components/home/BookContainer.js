@@ -18,13 +18,22 @@ const BookContainer = () => {
         }
     };
 
+    //filter featured books
+    const filterByStatus = (book) => {
+        if (isFeatured) {
+            return book.featured;
+        } else {
+            return true;
+        }
+    }
+
     let content = null;
 
     if (isLoading) content = <h1>Loading...</h1>;
     if (!isLoading && isError) content = <h1>{error}</h1>;
     if (!isLoading && !isError && books?.length === 0) content = <h1>No Results Found!</h1>;
     if (!isLoading && !isError && books?.length > 0) {
-        content = books?.filter(filterBySearch).map(book => <BookCard key={book.id} book={book} />)
+        content = books?.filter(filterBySearch).filter(filterByStatus).map(book => <BookCard key={book.id} book={book} />)
     }
 
     return (
