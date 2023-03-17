@@ -28,12 +28,12 @@
       "id": 4
     },
     {
-      "name": "Slow Horses (Deluxe Edition)2",
-      "author": "Numan2",
+      "name": "Slow Horses (Deluxe Edition)",
+      "author": "Laura Dave",
       "thumbnail": "https://edit.org/photos/images/cat/book-covers-big-2019101610.jpg-1300.jpg",
-      "price": "222",
-      "rating": 2,
-      "featured": false,
+      "price": "1002",
+      "rating": 4,
+      "featured": true,
       "id": 5
     }
   ]
