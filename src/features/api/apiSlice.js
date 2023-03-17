@@ -24,8 +24,19 @@ export const apiSlice = createApi({
                 method: 'PATCH',
                 body: data
             })
+        }),
+        deleteBook: builder.mutation({
+            query: (id) => ({
+                url: `/books/${id}`,
+                method: 'DELETE',
+            })
         })
     }),
 });
 
-export const { useGetBooksQuery, useGetBookQuery, useAddBookMutation, useEditBookMutation } = apiSlice;
+export const {
+    useGetBooksQuery,
+    useGetBookQuery,
+    useAddBookMutation,
+    useEditBookMutation,
+    useDeleteBookMutation } = apiSlice;
