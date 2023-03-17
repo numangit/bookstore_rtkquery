@@ -1,10 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useGetBookQuery } from '../../features/api/apiSlice';
 
 const BookCard = ({ book }) => {
     const { id, name, author, thumbnail, price, rating, featured } = book;
-    const { data: bookData, isLoading, isError } = useGetBookQuery(id);
+
     return (
         <div class="book-card">
             <img class="h-[240px] w-[170px] object-cover"

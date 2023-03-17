@@ -26,6 +26,15 @@
       "rating": 4,
       "featured": true,
       "id": 4
+    },
+    {
+      "name": "My Book",
+      "author": "Numan",
+      "thumbnail": "https://edit.org/photos/images/cat/book-covers-big-2019101610.jpg-1300.jpg",
+      "price": "123",
+      "rating": "4",
+      "featured": true,
+      "id": 5
     }
   ]
 }
