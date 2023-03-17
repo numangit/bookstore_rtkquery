@@ -22,10 +22,10 @@ export const apiSlice = createApi({
             invalidatesTags: ["books"]
         }),
         editBook: builder.mutation({
-            query: ({ id, data }) => ({
+            query: ({ id, updatedBook }) => ({
                 url: `/books/${id}`,
                 method: 'PATCH',
-                body: data
+                body: updatedBook
             })
         }),
         deleteBook: builder.mutation({

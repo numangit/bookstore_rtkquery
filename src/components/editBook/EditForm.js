@@ -48,7 +48,7 @@ const EditForm = ({ selectedBook }) => {
 
                 <div className="space-y-2">
                     <label htmlFor="lws-rating">Rating</label>
-                    <input required className="text-input" type="number" id="lws-rating" name="rating" min="1" max="5" value={rating} onChange={(e) => setRating(Number(e.target.value))} />
+                    <input required className="text-input" type="number" id="lws-rating" name="rating" min="1" max="5" value={rating} onChange={(e) => setRating(parseInt(e.target.value))} />
                 </div>
             </div>
 
