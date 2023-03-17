@@ -14,7 +14,6 @@ const Home = () => {
                     </div>
                 </div>
                 <BookContainer />
-
             </div>
         </main>
     );
