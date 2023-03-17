@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useEditBookMutation } from '../../features/api/apiSlice';
 
 const EditForm = ({ selectedBook }) => {
+    const navigate = useNavigate();
     const { id } = selectedBook;
     const [editBook, { isLoading, isError }] = useEditBookMutation();
 
@@ -21,6 +23,7 @@ const EditForm = ({ selectedBook }) => {
         e.preventDefault();
         console.log(updatedBook);
         editBook({ id, updatedBook });
+        navigate('/');
     };
 
     return (
