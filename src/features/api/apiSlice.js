@@ -5,6 +5,10 @@ export const apiSlice = createApi({
     baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:9000" }),
     //(builder) => ({}), why not (builder) => {}
     endpoints: (builder) => ({
+        getBooks: builder.query({
+            query: () => ({ url: "/books" }),
+        })
+    }),
+});
 
-    })
-})
+export const { useGetBooksQuery } = apiSlice;
