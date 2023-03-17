@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from '../../assets/logo.svg';
 import SearchForm from './SearchForm';
 
@@ -9,12 +10,12 @@ const Navbar = () => {
                 <img src={logo} width="150px" class="object-contain" alt="logo" />
 
                 <ul class="hidden md:flex items-center space-x-6">
-                    <a class="font-semibold cursor-pointer" href="index.html" id="lws-bookStore">
+                    <Link to='/' class="font-semibold cursor-pointer" id="lws-bookStore">
                         <li>Book Store</li>
-                    </a>
-                    <a class="cursor-pointer" href="AddBook.html" id="lws-addBook">
+                    </Link>
+                    <Link to='/addBook' class="cursor-pointer" id="lws-addBook">
                         <li>Add Book</li>
-                    </a>
+                    </Link>
                 </ul>
                 <SearchForm />
             </div>
