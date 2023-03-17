@@ -18,4 +18,5 @@ export const filterSlice = createSlice({
     }
 });
 
+export default filterSlice.reducer;
 export const { searchKeyword, setFeatured } = filterSlice.actions;
