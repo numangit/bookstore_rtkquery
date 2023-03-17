@@ -20,7 +20,6 @@ const AddBookForm = () => {
     //function handle submit
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(newBook);
         addBook(newBook);
         navigate('/');
     };

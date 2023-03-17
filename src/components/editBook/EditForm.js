@@ -21,7 +21,6 @@ const EditForm = ({ selectedBook }) => {
     //function handle submit
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(updatedBook);
         editBook({ id, updatedBook });
         navigate('/');
     };
