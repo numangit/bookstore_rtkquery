@@ -5,7 +5,7 @@ import BookCard from './BookCard';
 
 const BookContainer = () => {
     const { search, isFeatured } = useSelector(state => state.filter)
-    const { data: books, isLoading, isError, error } = useGetBooksQuery();
+    const { data: books, isLoading, isError } = useGetBooksQuery();
 
     //function to sort by search
     const filterBySearch = (book) => {
@@ -30,7 +30,7 @@ const BookContainer = () => {
     let content = null;
 
     if (isLoading) content = <h1>Loading...</h1>;
-    if (!isLoading && isError) content = <h1>{error}</h1>;
+    if (!isLoading && isError) content = <h1>There is an Error</h1>;
     if (!isLoading && !isError && books?.length === 0) content = <h1>No Results Found!</h1>;
     if (!isLoading && !isError && books?.length > 0) {
         content = books?.filter(filterBySearch).filter(filterByStatus).map(book => <BookCard key={book.id} book={book} />)

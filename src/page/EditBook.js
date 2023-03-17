@@ -5,7 +5,7 @@ import { useGetBookQuery } from '../features/api/apiSlice';
 
 const EditBook = () => {
     const { bookId } = useParams();
-    const { data: selectedBook, isLoading, isError, error } = useGetBookQuery(bookId);
+    const { data: selectedBook, isLoading, isError } = useGetBookQuery(bookId);
 
     let content = null;
 
@@ -13,7 +13,7 @@ const EditBook = () => {
         content = <h1>Loading...</h1>;
     }
     if (!isLoading && isError) {
-        content = <h1 style={{ color: 'red' }}>{error}</h1>;
+        content = <h1 style={{ color: 'red' }}>There is an Error</h1>;
     }
     if (!isLoading && !isError && selectedBook?.id) {
         content = <EditForm selectedBook={selectedBook} />;
