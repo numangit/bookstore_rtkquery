@@ -50,7 +50,7 @@ const AddBookForm = () => {
 
                 <div class="space-y-2">
                     <label for="lws-rating">Rating</label>
-                    <input required class="text-input" type="number" id="lws-rating" name="rating" min="1" max="5" value={rating} onChange={(e) => setRating(e.target.value)} />
+                    <input required class="text-input" type="number" id="lws-rating" name="rating" min="1" max="5" value={rating} onChange={(e) => setRating(parseInt(e.target.value))} />
                 </div>
             </div>
 
